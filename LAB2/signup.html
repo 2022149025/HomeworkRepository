@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이 짱천재야</title>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+    </head>
+    <body>
+        <h1>the Akbo Shop</h1>
+        <form method = "GET" action = "https://ys.learnus.org">
+            <div class="container1">
+            <div class="block">
+            <a href = "login.html" style="font-size: 4pt">로그인</a>
+            </div>
+            <div class="block" style="background-color:red; font-size: 4pt">회원가입</div>
+            </div>
+            <section class = "form">
+            <p>
+                <label>이름</label>: <input name = "name" type = "text" placeholder="이름을 입력해주세요" autofocus></label>
+            </p>
+            <p>
+                <label>생일: <input name = "birthday" type = "date"></label>
+            </p>
+            <p>
+                <label>이메일: <input name = "email" type = "email" placeholder = "name@domain.com" autocomplete>
+            </p>
+            <p>
+                <label>나이: <input name = "age" type = "number" min = "0" max = "200" step = "1" value = "20"></label>
+            </p>
+            <p>
+                <label>성별: <input name = "sex" type = "radio" value = "남성">남성</label>
+                <label><input name = "sex" type = "radio" value = "여성">여성</label>
+            </p>
+            <p>
+                <label>전화번호: <input name = "telephone" type = "telephone" placeholder = "(###)###-####"
+                    pattern = "\(\d{3}\) \d{3}-\d{4}" required /></label>
+            </p>
+            <p>
+                <label>세션: <input name = "session" type = "checkbox" value = "피아노"> 피아노</label>
+                <label></label><input name = "session" type = "checkbox" value = "클래식기타"> 클래식기타</label>
+                <label><input name = "session" type = "checkbox" value = "일렉트릭기타"> 일렉트릭기타</label>
+                <label><input name = "session" type = "checkbox" value = "베이스"> 베이스</label>
+                <label><input name = "session" type = "checkbox" value = "키보드"> 키보드</label>
+                <label><input name = "session" type = "checkbox" value = "드럼"> 드럼</label>
+                <label><input name = "session" type = "checkbox" value = "보컬"> 보컬</label>
+                <label><input name = "session" type = "checkbox" value = "그 외 타 악기들">그 외 타 악기들</label>
+            </p>
+            <p>
+                <label>유저 아이디: <input name = "id" type = "id" placehoder = "아이디를 입력하세요"></label>
+            </p>
+            <p>
+                <label>비밀번호: <input name = "password" type = "password" placeholder = "비밀번호 입력하세요"></label>
+            </p>
+            <p>
+                <label>비밀번호 확인: <input name = "confirmPass" type = "confirmPass" placeholder = "비밀번호 확인"></label>
+            </p>
+                    <input type = "submit" value = "signup" class = "signupbutton"/>
+                <input type = "reset" value = "Cancel" class = "cancelContainer"/>
+            </section>
+        </form>
+    </body>
+</html>
