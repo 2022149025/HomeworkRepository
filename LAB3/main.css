@@ -27,7 +27,7 @@ p       {
 .banner     {
     width: 1000px;
     padding: 5pt;
-    font-family: 'Black Han Sans';
+    font-family: 'Black Han Sans', 'Nanum Gothic';
     font-size: 200%;
     background-color:rgb(174, 171, 248);
     
@@ -92,7 +92,7 @@ label           {
 #loginButton          {
     border: none;
     background-color:rgb(174, 171, 248);
-    font-family: 'Black Han Sans';
+    font-family: 'Black Han Sans', 'Nanum Gothic';
     font-size: 120%;
     padding: 5pt;
 }
@@ -105,7 +105,7 @@ label           {
 #registerButton          {
     border: none;
     background-color:rgba(248, 178, 144, 0.959);
-    font-family: 'Black Han Sans';
+    font-family: 'Black Han Sans', 'Nanum Gothic';
     font-size: 120%;
     padding: 5pt;
 }
@@ -118,7 +118,7 @@ label           {
 #clearButton          {
     border: none;
     background-color:#c2f5d2f5;
-    font-family: 'Black Han Sans';
+    font-family: 'Black Han Sans', 'Nanum Gothic';
     font-size: 120%;
     padding: 5pt;
 }
@@ -129,7 +129,7 @@ label           {
 }
 
 h2              {
-    font-family:'Black Han Sans';
+    font-family:'Black Han Sans', 'Nanum Gothic';
     font-size:3em;
     margin: 20px;
 }
