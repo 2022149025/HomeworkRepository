@@ -1,0 +1,266 @@
+body    {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div     {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Nanum Gothic';
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-basis: content;
+}
+
+p       {
+    font-family: 'Nanum Gothic';
+}
+
+.bannerContainer    {
+    justify-content: end;
+    position: relative;
+    animation-name: moving;
+    animation-duration: 2s;
+}
+.banner     {
+    width: 1000px;
+    padding: 5pt;
+    font-family: 'Hanna';
+    font-size: 200%;
+    background-color:rgb(174, 171, 248);
+    
+}
+
+@keyframes moving
+{
+    0%  {width: 2500px;}
+    100% {width: 1020px;}
+}
+
+a           { text-decoration: none;}
+
+a:hover     { color: white; }
+
+.nav  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 1000px;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+div.button:hover   { background-color: rgba(0, 0, 0, 0.255);
+              color: white;}
+
+.button      {
+    text-align: center;
+    color:rgb(0, 0, 0);
+    padding: 12pt;
+    border-left: 1pt solid black;
+}
+
+a.bannerLink     {
+    text-decoration: none;
+    color: black;
+}
+
+.mainSpace     {
+    width: 980px;
+    flex-direction: column;
+    font-family: 'Nanum Gothic';
+    justify-content: center;
+    border: 1pt solid rgba(170, 161, 255, 0.289);
+    margin: 20pt;
+    padding: 10px;
+    text-align: center;
+}
+
+form            {
+    display: flex;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    flex-direction:column;
+}
+
+label           {
+    margin-bottom: 1.4em;
+}
+
+#loginButton          {
+    border: none;
+    background-color:rgb(174, 171, 248);
+    font-family: 'Hanna';
+    font-size: 120%;
+    padding: 5pt;
+}
+
+#loginButton:hover      {
+    background-color: black;
+    color: rgb(174, 171, 248);
+}
+
+#registerButton          {
+    border: none;
+    background-color:rgba(248, 178, 144, 0.959);
+    font-family: 'Hanna';
+    font-size: 120%;
+    padding: 5pt;
+}
+
+#registerButton:hover   {
+    background-color: black;
+    color: rgba(248, 178, 144, 0.959);
+}
+
+#clearButton          {
+    border: none;
+    background-color:#c2f5d2f5;
+    font-family: 'Hanna';
+    font-size: 120%;
+    padding: 5pt;
+}
+
+#clearButton:hover    {
+    background-color: black;
+    color: #c2f5d2f5;
+}
+
+h2              {
+    font-family:'Hanna';
+    font-size:3em;
+    margin: 20px;
+}
+
+
+#hoverDisplay   {
+    opacity: 0;
+}
+
+img       {
+    width: 150t;
+    height: 150pt;
+    transition: all ease 1s;
+}
+
+img:hover   {
+    transform: scale(1.4, 1.4);
+    transition-duration: 2s;
+}
+
+img.ditto   {
+    width: 100pt;
+    height: 100pt;
+}
+
+div.standBox    {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.standColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+div.standRow    {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.stand  { 
+    border: 1px solid black;
+    display: flex;
+    flex-direction:column;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    justify-content: end;
+    flex-basis: auto;
+}
+
+table   {
+    display: flex;
+    justify-content: center;
+    align-content: start;
+}
+
+div.standBox    {
+    display: flex;
+}
+
+.desc    {
+    font-family:'Nanum Gothic';
+    font-weight: bold;
+    font-size: 80%;
+    opacity: 0%;
+    margin-bottom: 25pt;
+}
+
+.stand:hover .desc {
+    opacity: 100%;
+}
+
+@media screen and (max-width:480px){
+    .nav {
+        width: 400px;
+    }
+    .mainSpace {
+        width: 400px;
+    }
+    .stand {
+        width: 70px;
+        height: 130px;
+    }
+    img {
+        width: 50pt;
+        height: 50pt;
+    }
+    .desc {
+        font-size: 7%;
+        margin-bottom: 10pt;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:800px){
+    .nav {
+        width: 500px;
+    }
+    .mainSpace {
+        width: 500px;
+    }
+    .stand {
+        width: 100px;
+        height: 180px;
+    }
+    img {
+        width: 75pt;
+        height: 75pt;
+    }
+    .desc {
+        font-size: 30%;
+        margin-bottom: 17pt;
+    }
+}
+
+@media screen and (min-width:801px){
+    .nav {
+        width:1000px;
+    }
+    .mainSpace {
+        width: 980px;
+    }
+    .stand {
+        width: 200px;
+        height: 300px;
+    }
+    .desc {
+        font-size: 80%;
+    }
+}

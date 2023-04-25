@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+        <meta charset = "utf-8">
+        <title>유니폼은 레플랜드</title>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <link href = "http://fonts.googleapis.com/earlyaccess/hanna.css" rel = "stylesheet">
+    </head>
+    <body>
+        <!--상단 배너(2초동안 오른쪽에서 왼쪽으로 Animation)-->
+        <div class = "bannerContainer">
+            <a href = "index.html" class = "bannerLink"><div class = "banner">유니폼은 레플랜드</div></a></div>
+        <!--상단 메뉴바-->
+        <div class = "nav">
+            <a href = "index.html"><div class = "button">홈</div></a>
+            <a href = "login.html"><div class = "button">로그인</div></a>
+            <div class = "button">회원가입</div>
+        </div>
+        <!--메인스페이스-->
+        <div class = "mainSpace">
+            <h2>회원가입</h2>
+            <!--입력창-->
+            <form method = "GET" autocomplete = "on" action = "http://ys.learnus.org">
+                <label>아이디: <input type = "id" name = "userID" size = "25" placeholder = "사용할 아이디를 입력하세요" required autofocus></label>
+                <label>비밀번호: <input type = "password" name = "password" size = "25" placeholder = "비밀번호를 입력하세요" required></label>
+                <label>비밀번호 확인: <input type = "password" size = "25" name = "confirmPassword" placeholder = "비밀번호를 다시 입력해주세요" required></label>
+                <label>이메일: <input type = "email" name = "email" size = "25" placeholder = "이메일을 입력하세요" required></label>
+                <label>생년월일: <input type = "date" name = "date" required></label>
+                <label>닉네임: <input type = "text" name = "nickname" size = "10" placeholder = "홍길동" required autocomplete></label>
+                <label>나이: 0<input type = "range" name = "age" step = "1">120</label>
+                <label for = "text">선호하는 리그: <input type = "text" list = "leagues" placeholder = "선호하는 리그를 입력하세요">
+                    <datalist id = "leagues">
+                        <option value = "English Premier League">
+                        <option value = "La Liga">
+                        <option value = "Serie A">
+                        <option value = "Bundesliga">
+                        <option value = "Ligue 1">
+                        <option value = "K-LEAGUE">
+                        <option value = "기타 해외 리그">
+                    </datalist>
+                </label>
+                <p>
+                <label><input type = "submit" name = "login" id = "registerButton" value = "회원가입"></label>
+                <label><input type = "reset" name = "clear" id = "clearButton" value = "초기화"></label>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

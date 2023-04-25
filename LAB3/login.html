@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+        <meta charset = "utf-8">
+        <title>유니폼은 레플랜드</title>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <link href = "http://fonts.googleapis.com/earlyaccess/hanna.css" rel = "stylesheet">
+    </head>
+    <body>
+        <!--상단 배너(2초동안 오른쪽에서 왼쪽으로 Animation)-->
+        <div class = "bannerContainer">
+            <a href = "index.html" class = "bannerLink"><div class = "banner">유니폼은 레플랜드</div></a></div>
+        <!--상단 메뉴바-->
+        <div class = "nav">
+            <a href = "index.html"><div class = "button">홈</div></a>
+            <div class = "button">로그인</div>
+            <a href = "signup.html"><div class = "button">회원가입</div></a>
+        </div>
+        <!--메인스페이스-->
+        <div class = "mainSpace">
+            <h2>로그인</h2>
+            <p><img class = "ditto" src = "Ditto.png"></p>
+            <!--입력창-->
+            <form method = "GET" action = "http://ys.learnus.org">
+                <label>아이디: <input type = "id" name = "userID" placeholder = "아이디를 입력하세요" required></label>
+                <label>비밀번호: <input type = "password" name = "password" placeholder = "비밀번호를 입력하세요" required></label>
+                <p><label><input type = "submit" name = "login" id = "loginButton" value = "로그인"></label></p>
+            </form>
+        </div>
+    </body>
+</html>
