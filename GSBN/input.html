@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>귀소본능 경로평가</title>
+  <link rel ="stylesheet" type = "text/css" href = "main.css">
+  <link rel="icon" type="image/png" href="images/GSBNicon2.png">
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDo4_WC27um8GnM9I2GS-uBi1A8iYWIERE",
+        authDomain: "gsbn-ba8b3.firebaseapp.com",
+        projectId: "gsbn-ba8b3",
+        storageBucket: "gsbn-ba8b3.appspot.com",
+        messagingSenderId: "36855542603",
+        appId: "1:36855542603:web:bf85d55973a821c75ceece",
+        measurementId: "G-JPQ97Z7R9M"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Form submission event handler
+    document.getElementById('userForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Get the input values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const from = document.getElementById('from').value;
+    const to = document.getElementById('to').value;
+    const review = document.getElementById('review').value;
+
+    // Create the user info object
+    const userInfo = {
+        name: name,
+        email: email,
+        from: from,
+        to: to,
+        review: review
+    };
+
+  // Add the user info to Firestore
+  addDoc(collection(db, 'users'), userInfo)
+    .then(() => {
+      console.log('User info successfully added.');
+      document.getElementById('userForm').reset(); // Reset the form
+    })
+    .catch((error) => {
+      console.error('Error adding user info:', error);
+    });
+});
+
+  </script>
+</head>
+<body>
+  <h1>유저 정보 입력</h1>
+  <div class="containall">
+    <div class = "centered-content">
+  <form id="userForm">
+    <label for="name">경로 설명:</label>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email"><br>
+
+    <label for="from">출발지:</label>
+    <input type="text" id="from" name="from"><br>
+
+    <label for="to">도착지:</label>
+    <input type="text" id="to" name="to"><br>
+
+    <label for="review">리뷰:</label>
+    <input type="text" id="review" name="review"><br>
+
+    <input type="submit" id="submit" value="저장" />
+  </form>
+  </div>
+  </div>
+</body>
+</html>

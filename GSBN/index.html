@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<title>귀소본능</title>
+<link rel ="stylesheet" type = "text/css" href = "main.css">
+<link rel="icon" type="image/png" href="images/GSBNicon2.png">
+<script src="common.js"></script>
+<script src="index.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxTWqvtLRODLypxRPh-kMWabTvHjsu8_8&libraries=places&callback=initialize" async defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <div id="rain-container"></div>
+    <div class="containall">
+    <div class = "centered-content">
+        <div class = "servicename">
+            <h1> 귀소본능<sup>&#223;eta</sup> </h1>
+            <h3> Home Is Where The Heart Is. </h3>
+        </div>
+        <div class = "flex-container" id="inputConsole">
+            <!--현재 위치 입력창-->
+            <img src="images/line.png" class = "line" id="connectingLine"></img>
+            <div id="currentLocationBox">
+                <div class = "containsettocur">
+                    <div><input class = "input grey" type="text" name="off" id="autocompleteInput2" placeholder="출발지 : 현재 위치" autocomplete="off" disabled="true"/></div>
+                    <div class = "settocur">
+                        <label> 현재 위치로 </label>
+                        <input name="starthere" type="checkbox" value="getCurrentLocation()" id="fromwhere" onchange="toggleInput()" checked />
+                    </div>
+                </div>
+                <div class = "center-container">
+                    <div class="container   " id="mapcenter1">
+                        <div id="map" style="height:200px"></div>
+                        <img class = "centered-image" alt = "Marker" src = "images/marker.png">
+                    </div>
+                </div>
+            </div>
+            <div class = center-container><img class = "fromtoimage" id = "fromtoimage" src="images/fromtoicon.png"></div>
+            <div id="arrivalLocationBox">
+                <input class = "input white" type="text" name="name" id="autocompleteInput" placeholder="목적지를 검색하세요" autocomplete="off" required />
+                <div class = "center-container">
+                    <div class="container" id="mapcenter2">
+                        <div id="map2" style="height:200px"></div>
+                        <img class = "centered-image" alt = "Marker" src = "images/marker.png">
+                    </div>
+                </div>
+            </div>
+            <div id="goButton">
+                <form onsubmit="submitForm(event)">
+                <input type="submit" id="submit" value="안내 시작" />
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer> <a href="example.com">FAQs</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="example.com">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="example.com">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;&copy;GSBN 2023. </footer>
+</body>
+</html>

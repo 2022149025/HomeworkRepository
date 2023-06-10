@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<title>귀소본능</title>
+<link rel="icon" type="image/png" href="images/GSBNicon2.png">
+<link rel ="stylesheet" type = "text/css" href = "main.css">
+<script src="common.js"></script>
+<script src="service.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxTWqvtLRODLypxRPh-kMWabTvHjsu8_8&callback=initialize" async defer></script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getFirestore, collection, addDoc, query, where, getDocs } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyDo4_WC27um8GnM9I2GS-uBi1A8iYWIERE",
+    authDomain: "gsbn-ba8b3.firebaseapp.com",
+    projectId: "gsbn-ba8b3",
+    storageBucket: "gsbn-ba8b3.appspot.com",
+    messagingSenderId: "36855542603",
+    appId: "1:36855542603:web:bf85d55973a821c75ceece",
+    measurementId: "G-JPQ97Z7R9M"
+  };
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Get the values from the URL parameters
+    const fromLat = urlParams.get('wherefromlat');
+    const fromLng = urlParams.get('wherefromlng');
+    const toLat = urlParams.get('wheretolat');
+    const toLng = urlParams.get('wheretolng');
+    const fromLatNum = parseFloat(fromLat);
+    const fromLngNum = parseFloat(fromLng);
+    const toLatNum = parseFloat(toLat);
+    const toLngNum = parseFloat(toLng);
+    const fromNameValue = `From: ${fromLatNum}, ${fromLngNum}`;
+    const toNameValue = `To: ${toLatNum}, ${toLngNum}`;
+
+    const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Create a query using the 'routes' collection
+const q = query(collection(db, 'users'));
+
+// Get the documents that match the query
+getDocs(q)
+  .then((querySnapshot) => {
+    // Check if there are any matching documents
+    if (!querySnapshot.empty) {
+      // Get the first document
+      const doc = querySnapshot.docs[1];
+
+      // Check if the document exists
+      if (doc.exists()) {
+        // Access the data within the document
+        const data = doc.data();
+        // Access the 'fromname' field
+        const fromname = data.name;
+        boxcontent = fromname;
+        console.log(fromname);
+      }
+    } else {
+      console.log('No matching documents found.');
+    }
+  })
+  .catch((error) => {
+    console.error('Error getting documents:', error);
+  });
+  </script>
+</head>
+<body>
+  <div id="rain-container"></div>
+  <div class="containall">
+    <div class = "centered-content">
+        <div class = "servicename">
+            <h1> 귀소본능<sup>&#223;eta</sup> </h1>
+            <h3> Home Is Where The Heart Is. </h3>
+        </div>
+        <div class = "flex-container" id="inputConsole">
+            <div id="currentLocationBox">
+                <div class = "center-container">
+                    <div class="container   " id="mapcenter1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="goButton">
+            <form id = "goback" onsubmit="submitForm(event)">
+            <input type="submit" id="submit" value="이전으로" />
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
